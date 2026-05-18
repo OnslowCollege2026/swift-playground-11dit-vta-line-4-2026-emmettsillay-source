@@ -4,25 +4,20 @@
 @main
 struct SwiftPlayground {
     static func main() {
-        var ingredients: [String] = []
-        var isRunning = true
-        while isRunning {
-            print("Enter your ingredients")
-            let input = readLine()!
-        if input == "" {
-            isRunning = false
-        } else {
-            ingredients.append(input)
-        }
+        
+print("What is your age?")
 
-        }
-    print("Ingredients list:")
-    for ingredients in ingredients {
-print(ingredients)
-if ingredients == "chocolatte" {
-    print("Yum!")
-}
+if let input = readLine(), let age = Int(input) {
+    if age <= 0 || age >= 122 {
+        print("Age incorrect.")
+    } else if age <= 18 {
+        print("Too young.")
+    } else {
+        print("You may enter")
     }
-    print("Lets start cooking!")
+} else {
+    print("Please enter a number.")
+}
+
     }
 }
