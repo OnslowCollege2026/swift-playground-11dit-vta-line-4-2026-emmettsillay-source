@@ -6,7 +6,7 @@ struct SwiftPlayground {
     static func main() {
         // Test that it works as it should using the testing table
 // Task - Only to accept people in if they are over the age of 18 
-
+var askingQuestion = true
 print("What is your age?")
 
 if let input = readLine(), let age = Int(input) {
