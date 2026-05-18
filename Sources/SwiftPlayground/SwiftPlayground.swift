@@ -18,6 +18,6 @@ if let input = readLine(), let age = Int(input) {
 } else {
     print("Please enter a number.")
 }
-} else if isRunning = false 
+    }
     }
 }
