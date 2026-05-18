@@ -9,7 +9,9 @@ struct SwiftPlayground {
 var askingQuestion = true
 print("What is your age?")
 
-if let input = readLine(), let age = Int(input) {
+while askingQuestion {
+    let input = readLine()
+    let age = Int(input)
     if age <= 0 || age >= 122 {
         print("Age incorrect.")
     } else if age <= 18 {
@@ -17,7 +19,6 @@ if let input = readLine(), let age = Int(input) {
     } else {
         print("You may enter")
     }
-} else {
     print("Please enter a number.")
 }
 
