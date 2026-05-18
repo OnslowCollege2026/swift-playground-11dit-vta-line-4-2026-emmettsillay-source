@@ -4,13 +4,11 @@
 @main
 struct SwiftPlayground {
     static func main() {
-        var ingredients = [
-            ""
-        ]
+        var ingredients: [String] = []
         var isRunning = true
         while isRunning {
             print("Enter your ingredients")
-            let input = readLine()
+            let input = readLine()!
         if input == "" {
             isRunning = false
         } else {
@@ -19,12 +17,12 @@ struct SwiftPlayground {
 
         }
     print("Ingredients list:")
-    for ingredient in ingredients {
+    for ingredients in ingredients {
 print(ingredients)
-if ingredient == "chocolatte" {
+if ingredients == "chocolatte" {
     print("Yum!")
 }
-print("Lets start cooking!")
     }
+    print("Lets start cooking!")
     }
 }
