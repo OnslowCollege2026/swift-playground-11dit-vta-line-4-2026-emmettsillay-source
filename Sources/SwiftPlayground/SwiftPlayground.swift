@@ -53,7 +53,14 @@ print("Have you seen a Bird or Insect:")
 
 let input = readLine()!.lowercased()
 
-// Prints first Question. / Bird section.
+/*
+
+
+BIRD SECTION
+
+
+*/
+// Prints first Question.
 if input == "bird" {
     birdRunning = true
     print()
@@ -114,10 +121,74 @@ default: print("Input incorrect, try again.")
 }
 }
 
-// First question. / Insect section.
+/* 
+
+
+INSECT SECTION
+
+
+
+*/
+// First question.
 } else if input == "insect" {
 print()
 print("Work in progress!")
+
+// Prints out a number before the bird type.
+while birdRunning == true {
+    counter = 0
+    birds.forEach { bird in
+    counter = counter + 1
+    print("\(counter), \(bird)")
+    }
+
+// User input for bird seen.
+print("Enter a number:")
+print()
+let input = readLine()!
+let seenBird = Int(input)
+
+// Adds a tally to the tally variable for whichever bird user chose.
+switch seenBird {
+case 1: print("Tally added to \(birds[0]), would you like to add another: Y/N")
+birdsTally.append(birds[0])
+switcProgram1()
+
+case 2: print("Tally added to \(birds[1]), would you like to add another: Y/N")
+birdsTally.append(birds[1])
+switcProgram1()
+
+case 3: print("Tally added to \(birds[2]), would you like to add another: Y/N")
+birdsTally.append(birds[2])
+switcProgram1()
+
+case 4: print("Tally added to \(birds[3]), would you like to add another: Y/N")
+birdsTally.append(birds[3])
+switcProgram1()
+
+case 5: print("Tally added to \(birds[4]), would you like to add another: Y/N")
+birdsTally.append(birds[4])
+switcProgram1()
+
+case 6: print("Tally added to \(birds[5]), would you like to add another: Y/N")
+birdsTally.append(birds[5])
+switcProgram1()
+
+case 7: print("Tally added to \(birds[6]), would you like to add another: Y/N")
+birdsTally.append(birds[6])
+switcProgram1()
+
+case 8: print("Tally added to \(birds[7]), would you like to add another: Y/N")
+birdsTally.append(birds[7])
+switcProgram1()
+
+case 9: print("Canceled")
+birdRunning = false
+
+default: print("Input incorrect, try again.")
+}
+}
+
 } else {
     print("Wrong input.")
 }
