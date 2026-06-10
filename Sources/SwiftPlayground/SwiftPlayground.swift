@@ -8,8 +8,11 @@ struct SwiftPlayground {
 // Allows repetiton of the "birdRunning" while statement.
 var birdRunning = false
 
-// Allows the "Today you saw:" code to run.
-var endingCode = false
+// Allows the "Today you saw:" code for Birds to run.
+var endingCodeA = false
+
+// Allows the "Today you saw:" code for Insects to run.
+var endingCodeB = false
 
 // Allows repetition of the "insectRunning" while statement.
 var insectRunning = false
@@ -124,13 +127,19 @@ birdRunning = false
 
 default: print("Input incorrect, try again.")
 }
+endingCodeA = true
 }
 
 // Adds a tally to the tally variable.
 let tally = birdsTally.reduce(into: [:]) { counts, birdsTally in
     counts[birdsTally, default: 0] += 1
 }
-endingCode = true
+
+if endingCodeA {
+print()
+print("Today you saw:")
+}
+
 tally.forEach { birds, count in
 print("\(count). \(birds)")
 }
@@ -203,13 +212,13 @@ insectRunning = false
 default: print("Input incorrect, try again.")
 }
 }
-endingCode = true
+endingCodeB = true
 } else {
     print("Wrong input.")
 }
 
 // Prints what Birds / Insects user saw and how many.
-if endingCode {
+if endingCodeB {
 print()
 print("Today you saw:")
 }
