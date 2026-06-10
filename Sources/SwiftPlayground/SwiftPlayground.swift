@@ -154,27 +154,27 @@ let seenInsect = Int(input)
 switch seenInsect {
 case 1: print("Tally added to \(insects[0]), would you like to add another: Y/N")
 birdsTally.append(insects[0])
-switcProgram1()
+switcProgram2()
 
 case 2: print("Tally added to \(insects[1]), would you like to add another: Y/N")
 birdsTally.append(insects[1])
-switcProgram1()
+switcProgram2()
 
 case 3: print("Tally added to \(insects[2]), would you like to add another: Y/N")
 birdsTally.append(insects[2])
-switcProgram1()
+switcProgram2()
 
 case 4: print("Tally added to \(insects[3]), would you like to add another: Y/N")
 birdsTally.append(insects[3])
-switcProgram1()
+switcProgram2()
 
 case 5: print("Tally added to \(insects[4]), would you like to add another: Y/N")
 birdsTally.append(insects[4])
-switcProgram1()
+switcProgram2()
 
 case 6: print("Tally added to \(insects[5]), would you like to add another: Y/N")
 birdsTally.append(insects[5])
-switcProgram1()
+switcProgram2()
 
 case 7: print("Tally added to \(insects[6]), would you like to add another: Y/N")
 birdsTally.append(insects[6])
@@ -216,9 +216,20 @@ birdRunning = true
 } else if input == "n" {
     birdRunning = false
 } else {
-    print("Invalid input")
+    print("Invalid input.")
 }
 
+}
+
+func switcProgram2() {
+    let input = readLine()!.lowercased()
+    if input == "y" {
+        insectRunning = true
+    } else if input == "n" {
+        insectRunning = false 
+    } else {
+        print("Invalid input.")
+    }
 }
 
     }
