@@ -4,9 +4,14 @@
 @main
 struct SwiftPlayground {
     static func main() {
+
 // Allows repetiton of the "birdRunning" while statement.
 var birdRunning = false
 
+// Allows the "Today you saw:" code to run.
+var endingCode = false
+
+// Allows repetition of the "insectRunning" while statement.
 var insectRunning = false
 
 // Array of bird species
@@ -125,6 +130,7 @@ default: print("Input incorrect, try again.")
 let tally = birdsTally.reduce(into: [:]) { counts, birdsTally in
     counts[birdsTally, default: 0] += 1
 }
+endingCode = true
 tally.forEach { birds, count in
 print("\(count). \(birds)")
 }
@@ -140,7 +146,6 @@ INSECT SECTION
 // First question.
 } else if input == "insect" {
 print()
-print("Work in progress!")
 
 insectRunning = true
 
@@ -198,15 +203,16 @@ insectRunning = false
 default: print("Input incorrect, try again.")
 }
 }
-
+endingCode = true
 } else {
     print("Wrong input.")
 }
 
 // Prints what Birds / Insects user saw and how many.
+if endingCode {
 print()
 print("Today you saw:")
-
+}
 // Adds a tally to the tally variable.
 let tally = insectsTally.reduce(into: [:]) { counts, insectsTally in
     counts[insectsTally, default: 0] += 1
