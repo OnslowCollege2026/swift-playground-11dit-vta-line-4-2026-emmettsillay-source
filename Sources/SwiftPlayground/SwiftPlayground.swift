@@ -134,56 +134,58 @@ INSECT SECTION
 print()
 print("Work in progress!")
 
-// Prints out a number before the bird type.
-while birdRunning == true {
+insectRunning = true
+
+// Prints out a number before the insect type.
+while insectRunning {
     counter = 0
-    birds.forEach { bird in
+    insects.forEach { insects in
     counter = counter + 1
-    print("\(counter), \(bird)")
+    print("\(counter), \(insects)")
     }
 
-// User input for bird seen.
+// User input for insect seen.
 print("Enter a number:")
 print()
 let input = readLine()!
-let seenBird = Int(input)
+let seenInsect = Int(input)
 
-// Adds a tally to the tally variable for whichever bird user chose.
-switch seenBird {
-case 1: print("Tally added to \(birds[0]), would you like to add another: Y/N")
-birdsTally.append(birds[0])
+// Adds a tally to the tally variable for whichever insect user chose.
+switch seenInsect {
+case 1: print("Tally added to \(insects[0]), would you like to add another: Y/N")
+birdsTally.append(insects[0])
 switcProgram1()
 
-case 2: print("Tally added to \(birds[1]), would you like to add another: Y/N")
-birdsTally.append(birds[1])
+case 2: print("Tally added to \(insects[1]), would you like to add another: Y/N")
+birdsTally.append(insects[1])
 switcProgram1()
 
-case 3: print("Tally added to \(birds[2]), would you like to add another: Y/N")
-birdsTally.append(birds[2])
+case 3: print("Tally added to \(insects[2]), would you like to add another: Y/N")
+birdsTally.append(insects[2])
 switcProgram1()
 
-case 4: print("Tally added to \(birds[3]), would you like to add another: Y/N")
-birdsTally.append(birds[3])
+case 4: print("Tally added to \(insects[3]), would you like to add another: Y/N")
+birdsTally.append(insects[3])
 switcProgram1()
 
-case 5: print("Tally added to \(birds[4]), would you like to add another: Y/N")
-birdsTally.append(birds[4])
+case 5: print("Tally added to \(insects[4]), would you like to add another: Y/N")
+birdsTally.append(insects[4])
 switcProgram1()
 
-case 6: print("Tally added to \(birds[5]), would you like to add another: Y/N")
-birdsTally.append(birds[5])
+case 6: print("Tally added to \(insects[5]), would you like to add another: Y/N")
+birdsTally.append(insects[5])
 switcProgram1()
 
-case 7: print("Tally added to \(birds[6]), would you like to add another: Y/N")
-birdsTally.append(birds[6])
-switcProgram1()
+case 7: print("Tally added to \(insects[6]), would you like to add another: Y/N")
+birdsTally.append(insects[6])
+switcProgram2()
 
-case 8: print("Tally added to \(birds[7]), would you like to add another: Y/N")
-birdsTally.append(birds[7])
-switcProgram1()
+case 8: print("Tally added to \(insects[7]), would you like to add another: Y/N")
+birdsTally.append(insects[7])
+switcProgram2()
 
 case 9: print("Canceled")
-birdRunning = false
+insectRunning = false
 
 default: print("Input incorrect, try again.")
 }
@@ -198,11 +200,11 @@ print()
 print("Today you saw:")
 
 // Adds a tally to the tally variable.
-let tally = birdsTally.reduce(into: [:]) { counts, birdsTally in
-    counts[birdsTally, default: 0] += 1
+let tally = insectsTally.reduce(into: [:]) { counts, insectsTally in
+    counts[insectsTally, default: 0] += 1
 }
-tally.forEach { bird, count in
-print("\(count). \(bird)")
+tally.forEach { insects, count in
+print("\(count). \(insects)")
 }
 
 // Function for bird section switch
