@@ -121,6 +121,14 @@ default: print("Input incorrect, try again.")
 }
 }
 
+// Adds a tally to the tally variable.
+let tally = birdsTally.reduce(into: [:]) { counts, item in
+    counts[birdsTally, default: 0] += 1
+}
+tally.forEach { insects, count in
+print("\(count). \(insects)")
+}
+
 /* 
 
 
