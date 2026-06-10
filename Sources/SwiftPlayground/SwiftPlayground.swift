@@ -52,6 +52,7 @@ print("Have you seen a Bird or Insect:")
 
 
 let input = readLine()!.lowercased()
+
 // Prints first Question. / Bird section.
 if input == "bird" {
     birdRunning = true
@@ -112,6 +113,7 @@ birdRunning = false
 default: print("Input incorrect, try again.")
 }
 }
+
 // First question. / Insect section.
 } else if input == "insect" {
 print()
@@ -133,7 +135,7 @@ print("\(count). \(bird)")
 }
 
 // Function for bird section switch
-// y = continues the loop, n = stops the loop
+// y = continues the loop, n = stops the loop, anything else is invalid
 func switcProgram1() {
     let input = readLine()!.lowercased()
 if input == "y" {
