@@ -135,7 +135,9 @@ if input == "y" {
 birdRunning = true
 } else if input == "n" {
     birdRunning = false
-} else 
+} else {
+    print("Invalid input. ")
+}
 
 }
 
