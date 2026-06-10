@@ -18,7 +18,8 @@ let birds: [String] = [
     "Kiwi",
     "Pāteke",
     "Tūī",
-    "Kererū"
+    "Kererū",
+    "Cancel"
 ]
 
 // Use in birds Switch as the final tally counter for it.
@@ -34,7 +35,8 @@ let insects: [String] = [
     "Pūngāwerewere",
     "Ngaokeoke",
     "Waemano",
-    "Kapowai"
+    "Kapowai",
+    "Cancel"
 ]
 
 // Unused currently.
@@ -103,6 +105,9 @@ switcProgram1()
 case 8: print("Tally added to \(birds[7]), would you like to add another: Y/N")
 birdsTally.append(birds[7])
 switcProgram1()
+
+case 9: print("Canceled")
+birdRunning = false
 
 default: print("Input incorrect, try again.")
 }
