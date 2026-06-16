@@ -80,6 +80,7 @@ let input = readLine()!.lowercased()
 }
 print()
 print("Thank you for ordering. Your total cost is: $\(totalCost[0])")
+print("Cash or card?")
 
 
     }
