@@ -5,16 +5,18 @@
 struct SwiftPlayground {
     static func main() {
 
-/// Creates the constants for food types, food cost, drink types and drink costs. It also holds the variables for the total cost of the order and if the code is running. 
+/// Creates the constants for food types, food cost, drink types and drink costs.
 let foods: [String] = [ "Burger", "Sushi", "Pizza", "Garlic bread", "Pork bun", "Dumplings" ]
 let foodsCost: [Double] = [7, 4, 5, 4, 5, 5]
 let drinks: [String] = [ "Juice", "Up & go", "Gatorade", "Water", "Coffee", "Fruit soda drink" ]
 let drinksCost: [Double] = [4, 4.5, 6, 3, 6, 4]
 
+// Constants for both food / drink types and their costs. Also holds the total cost of order.
 let foodAndCost = Array(zip(foods, foodsCost))
 let drinksAndCost = Array(zip(drinks, drinksCost))
-
 var totalCost: [Double] = [0]
+
+// Allows the repeating while loop that 
 var isRunning = true
 
 
@@ -60,8 +62,8 @@ let input = readLine()!.lowercased()
 
         print("Enter a number:")
         
-        if let input = readLine(), let index = Int(input), index >= 0 && index <= foodsCost.count {
-            let priceAdding = foodsCost[index - 1]
+        if let input = readLine(), let index = Int(input), index >= 0 && index <= drinksCost.count {
+            let priceAdding = drinksCost[index - 1]
             let currentTotal = totalCost.reduce(0, +)
             let newTotal = currentTotal + priceAdding
             totalCost = [newTotal]
