@@ -16,7 +16,7 @@ let foodAndCost = Array(zip(foods, foodsCost))
 let drinksAndCost = Array(zip(drinks, drinksCost))
 var totalCost: [Double] = [0]
 
-// Allows the repeating while loop that 
+// Allows the repeating while loop that runs the entire code to run.
 var isRunning = true
 
 
@@ -24,6 +24,7 @@ var isRunning = true
 // Prints welcome message / Asks user if they would like to order a drink / food.
 print("Welcome to SelfServe3001, Would you like to select a food or drink?")
 
+// 
 while isRunning {
 
 let input = readLine()!.lowercased()
