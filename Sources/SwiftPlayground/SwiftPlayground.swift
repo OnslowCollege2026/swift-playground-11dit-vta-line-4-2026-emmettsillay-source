@@ -38,27 +38,45 @@ let input = readLine()!.lowercased()
 
         print("Enter a number:")
         
-        if let input = readLine(), let index = Int(input), index >= 0 && index < foodsCost.count {
-            let priceAdding = foodsCost[index]
+        if let input = readLine(), let index = Int(input), index >= 0 && index <= foodsCost.count {
+            let priceAdding = foodsCost[index - 1]
             let currentTotal = totalCost.reduce(0, +)
             let newTotal = currentTotal + priceAdding
             totalCost = [newTotal]
-            print("Cost added to total. Current total = $\(totalCost)")
+            print("Cost added to total. Current total = $\(totalCost[0])")
+            print()
+            print("Would you like to order again, if Yes type 'food' or 'drink'. If no type 'q' ")
         }
 
     } else if input == "drink" {
         print("You have selected: \(input)")
         print()
+
         print("Food Types:")
-        drinks.enumerated().forEach { index, drinks in
-        print("\(index + 1). \(drinks)")}
+        drinksAndCost.enumerated().forEach { index, drinksAndCost in
+        print("\(index + 1). \(drinksAndCost.0) | $\(drinksAndCost.1)")
+        }
         print()
+
         print("Enter a number:")
+        
+        if let input = readLine(), let index = Int(input), index >= 0 && index <= foodsCost.count {
+            let priceAdding = foodsCost[index - 1]
+            let currentTotal = totalCost.reduce(0, +)
+            let newTotal = currentTotal + priceAdding
+            totalCost = [newTotal]
+            print("Cost added to total. Current total = $\(totalCost[0])")
+            print()
+            print("Would you like to order again, if Yes type 'food' or 'drink'. If no type 'q' ")
+        }
+    } else if input == "q" {
+        isRunning = false
     } else {
         print("Invalid input, try again.")
     }
-
 }
+print()
+print("Thank you for ordering. Your total cost is: $\(totalCost[0])")
 
 
     }
